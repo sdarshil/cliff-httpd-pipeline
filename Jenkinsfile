@@ -10,13 +10,12 @@ pipeline {
         }
         stage('docker build') {
             steps {
-                sh 'docker build .'
+                sh 'docker build . -t sdarshil/clifftest'
                 
             } 
         }
         stage('docker push to hub') {
             steps {
-                sh 'docker tag newimage sdarshil/clifftest'
                 sh 'docker push sdarshil/clifftest'
                 
             } 
