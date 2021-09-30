@@ -4,14 +4,10 @@ pipeline {
     stages {
         stage('github code') {
             steps {
+               cleanWs()
                git 'https://github.com/sdarshil/cliff-httpd-pipeline'
                 
             }
-        }
-        post { 
-        always { 
-            cleanWs()
-        }
         }
         
         stage('docker build') {
