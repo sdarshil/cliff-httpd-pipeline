@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('github code') {
-            steps {
-               git 'https://github.com/sdarshil/cliff-httpd-pipeline'
-                
-            }
-        }
         
         stage('docker build') {
             steps {
