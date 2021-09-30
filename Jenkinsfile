@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('github code') {
             steps {
-               cleanWs()
                git 'https://github.com/sdarshil/cliff-httpd-pipeline'
                 
             }
