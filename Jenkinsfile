@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('github code') {
             steps {
-               git 'https://github.com/sdarshil/cliff-httpd-pipeline/'
+               git 'https://github.com/sdarshil/cliff-httpd-pipeline'
                 
             }
         }
