@@ -5,19 +5,19 @@ pipeline {
         
         stage('docker build') {
             steps {
-                sh 'docker build . -t sdarshil/clifftest'
+                sh 'sudo docker build . -t sdarshil/clifftest'
                 
             } 
         }
         stage('docker push to hub') {
             steps {
-                sh 'docker push sdarshil/clifftest'
+                sh 'sudo docker push sdarshil/clifftest'
                 
             } 
         }
             stage('kubernetes deploy image set') {
             steps {
-                sh 'kubectl set image deployment/production clifftest=sdarshil/clifftest'
+                sh 'sudo kubectl set image deployment/production clifftest=sdarshil/clifftest'
                 
             } 
         }
