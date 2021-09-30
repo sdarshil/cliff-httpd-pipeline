@@ -8,6 +8,12 @@ pipeline {
                 
             }
         }
+        post { 
+        always { 
+            cleanWs()
+        }
+        }
+        
         stage('docker build') {
             steps {
                 sh 'docker build . -t sdarshil/clifftest'
